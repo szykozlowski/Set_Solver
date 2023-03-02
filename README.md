@@ -1,3 +1,5 @@
+# Overview
+
 This is a script that solves the daily set puzzle on http://www.setgame.com/set/puzzle
 
 
@@ -24,3 +26,27 @@ The SAME Number (One)
 The SAME Color (Red)
 
 A DIFFERENT Shade (Solid, Shaded, Hollow)
+
+# How it Works
+
+The script works through utilzing OpenCV contours to identify the shapes present on the daily set puzzle, and translating that into input through Chrome Selenium.
+
+## Identifying the Attributes of the Card
+
+The script needs to identify the Four attributes of every card.  Below, I will describe how every attribute is detected.
+
+### Shape
+
+In order to identify the shape the script uses the OpenCV "matchShapes()" function, which compares the unknown shape, to an example of a known shape.  If the coefficient of similarity is below a certain threshold, the shape is identified.
+
+### Color
+
+In order to identify the color, RGB bounds for the three colors are established.  If the amount of pixels in the card that fall into that RGB threshold is a non-zero value, the color is identified.
+
+### Number
+
+In order to identify the number, the largest contour in the image is identified by area.  Since the largest contour will always be the shape, the area of that contour is compared to the other contours in the card.  The amount of contours that have a similar area to the largest contour is equivelent to the number of shapes on the card, meaning the number is identified.
+
+### Shade
+
+In order to find the shade, I utilized a correlation between the number of contours in the image, and the previously determined number of shapes in the image.  If the total number of contours in the image is equivelent to the number of shapes, the card is Solid.  If the number of contours is double that of the number of shapes, the card is Hollow.  Finally, if the number of contours is greater than double the number of shapes, the card is deemed to be Shaded.

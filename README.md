@@ -2,6 +2,7 @@
 
 This is a script that solves the daily set puzzle on http://www.setgame.com/set/puzzle
 
+## Rules of Set
 
 In order to understand this script, one must first become familiar with the game of "Set".
 
@@ -33,7 +34,7 @@ The script works through utilzing OpenCV contours to identify the shapes present
 
 ## Identifying the Attributes of the Card
 
-The script needs to identify the Four attributes of every card.  Below, I will describe how every attribute is detected.
+The script needs to identify the Four attributes of every card.  Below, I will describe how each of the four attributes is detected.
 
 ### Shape
 

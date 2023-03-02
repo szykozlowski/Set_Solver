@@ -14,7 +14,9 @@ For the card below, the Shape is "Diamond", the Color is "Red", the Number is "O
 
 The goal of the game us to find three cards that create a SET.  In order for three cards to be considered a SET, they need to be either the SAME, or DIFFERENT, for each of the four attributes.
 
-For example, the three cards below create a SET.
+## Example
+
+The three cards below create a SET.
 
 ![image](https://user-images.githubusercontent.com/92408910/222541622-a013435a-410e-47b7-aff8-35834a27ad60.png) ![image](https://user-images.githubusercontent.com/92408910/222541543-3718210c-9c18-45df-b066-acdf0f44f816.png) ![image](https://user-images.githubusercontent.com/92408910/222541687-08f873a1-dcd6-4d53-9927-0578d034e5d5.png)
 

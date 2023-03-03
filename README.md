@@ -72,4 +72,8 @@ In order to find the shade, I utilized a correlation between the number of conto
 
 ## Determining if Three Cards Create a Set
 
-This becomes far easier if we assign a number from 0-2 to every variation of an attribute.  For example: we can assign "Diamond" with "0", "Squiggle" with "1", and "Oval" with "2".  If the sum of these numbers is divisible by 3, the attribute is either the same, or different between the set of cards.  
+This becomes far easier if we assign a number from 0-2 to every variation of an attribute.  For example: we can assign "Diamond" with "0", "Squiggle" with "1", and "Oval" with "2".  If the sum of these numbers is divisible by 3, the attribute is either the same, or different between the set of cards.
+
+## Browser Input with Selenium
+
+When the program is done figuring out which cards create sets, the corresponding cards need to be selected in the browser.  This is done through Selenium.  When the cards are picked out, the buttons that correspond to the cards are clicked.  This is repeated for every set.  

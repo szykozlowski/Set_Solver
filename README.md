@@ -50,6 +50,10 @@ A DIFFERENT Shade (Solid, Shaded, Hollow)
 
 The script works through utilzing OpenCV contours to identify the shapes present on the daily set puzzle, and translating that into input through Chrome Selenium.
 
+## Finding the Cards
+
+First, through the use of Selenium, every image of a card is downloaded from the website.
+
 ## Identifying the Attributes of the Card
 
 The script needs to identify the Four attributes of every card.  Below, I will describe how each of the four attributes is detected.
